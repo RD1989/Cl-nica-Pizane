@@ -1,5 +1,5 @@
 <?php
-require_once '../api/config.php';
+require_once '../config.php';
 session_start();
 
 if (isset($_POST['login'])) {
