@@ -32,10 +32,10 @@ $pendentes = count(array_filter($leads, fn($l) => $l['status'] == 'Pendente'));
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #851F33;
-            --sidebar-bg: #2A1C1F;
-            --bg-light: #F8F5F2;
-            --gold: #CBA358;
+            --primary: #E31B23;
+            --sidebar-bg: #1A1A1A;
+            --bg-light: #F9F9F9;
+            --gold: #D4AF37;
             --text-dark: #333;
         }
 
@@ -54,7 +54,7 @@ $pendentes = count(array_filter($leads, fn($l) => $l['status'] == 'Pendente'));
 
         /* Dashboard Stats */
         .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 40px; }
-        .stat-card { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(133,31,51,0.05); }
+        .stat-card { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(227, 27, 35, 0.05); }
         .stat-card h3 { font-size: 13px; color: #6B5E62; text-transform: uppercase; margin: 0 0 10px 0; }
         .stat-card p { font-size: 32px; font-weight: 700; color: var(--primary); margin: 0; }
 

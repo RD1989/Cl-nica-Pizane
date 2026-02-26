@@ -7,6 +7,8 @@
     <title>Clínica Pizane Estética e Saúde Avançada | Itaperuna e Região</title>
     <meta name="description"
         content="Especialistas em Estética Avançada Facial e Corporal em Itaperuna. Botox, Harmonização, Emagrecimento, Depilação a Laser e muito mais. Agende sua avaliação.">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#FFFFFF">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,8 +71,7 @@
             overflow-x: hidden !important;
             font-family: 'Inter', sans-serif !important;
             scroll-behavior: smooth !important;
-            background-color: #F8F5F2 !important;
-            /* Off-white premium */
+            background-color: #FFFFFF !important;
             color: #333333 !important;
             -webkit-font-smoothing: antialiased !important;
         }
@@ -93,16 +94,16 @@
 
         /* Variáveis de Cor (Extraídas do logo e painel: Bordô e Dourado) */
         :root {
-            --primary: #851F33;
-            /* Vermelho Escuro/Bordô Pizane */
-            --primary-light: #A42942;
-            --primary-dark: #631424;
-            --gold: #CBA358;
-            /* Dourado Cobre */
-            --gold-light: #DFBE7B;
-            --bg-light: #FDFBF9;
-            --text-dark: #2A1C1F;
-            --text-muted: #6B5E62;
+            --primary: #E31B23;
+            /* Vermelho Clínico Pizane */
+            --primary-light: #FF4D4D;
+            --primary-dark: #B3141A;
+            --gold: #D4AF37;
+            /* Dourado Nobre */
+            --accent: #F2F2F2;
+            --bg-light: #F9F9F9;
+            --text-dark: #1A1A1A;
+            --text-muted: #666666;
             --white: #FFFFFF;
         }
 
@@ -126,7 +127,7 @@
             width: 100% !important;
             background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(10px) !important;
-            box-shadow: 0 4px 20px rgba(133, 31, 51, 0.05) !important;
+            box-shadow: 0 4px 20px rgba(227, 27, 35, 0.08) !important;
             z-index: 9999 !important;
             padding: 15px 0 !important;
             transition: all 0.3s ease !important;
@@ -177,7 +178,7 @@
             display: inline-flex !important;
             align-items: center !important;
             gap: 8px !important;
-            box-shadow: 0 10px 20px rgba(133, 31, 51, 0.2) !important;
+            box-shadow: 0 10px 20px rgba(227, 27, 35, 0.2) !important;
             transition: transform 0.3s ease, box-shadow 0.3s ease !important;
             border: none !important;
             cursor: pointer !important;
@@ -185,17 +186,18 @@
 
         .pz-btn-primary:hover {
             transform: translateY(-2px) !important;
-            box-shadow: 0 15px 25px rgba(133, 31, 51, 0.3) !important;
+            box-shadow: 0 15px 25px rgba(227, 27, 35, 0.3) !important;
         }
 
         .pz-btn-gold {
-            background: linear-gradient(135deg, var(--gold) 0%, #b38e4a 100%) !important;
+            background: var(--primary) !important;
             color: var(--white) !important;
-            box-shadow: 0 10px 20px rgba(203, 163, 88, 0.3) !important;
+            box-shadow: 0 10px 20px rgba(227, 27, 35, 0.2) !important;
         }
 
         .pz-btn-gold:hover {
-            box-shadow: 0 15px 25px rgba(203, 163, 88, 0.4) !important;
+            background: var(--primary-dark) !important;
+            box-shadow: 0 15px 25px rgba(227, 27, 35, 0.3) !important;
         }
 
         /* =========================================================================
@@ -259,7 +261,7 @@
             display: flex !important;
             gap: 30px !important;
             margin-top: 40px !important;
-            border-top: 1px solid rgba(133, 31, 51, 0.1) !important;
+            border-top: 1px solid rgba(227, 27, 35, 0.1) !important;
             padding-top: 30px !important;
         }
 

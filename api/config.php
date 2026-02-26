@@ -1,13 +1,13 @@
 <?php
-// Configurações do Banco de Dados MySQL
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'nome_do_banco');
-define('DB_USER', 'usuario_do_banco');
-define('DB_PASS', 'senha_do_banco');
+// Configurações do Banco de Dados MySQL (Suporte a Variáveis de Ambiente para Vercel)
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_NAME', getenv('DB_NAME') ?: 'pizane_db');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
 
 // Configurações do Painel Admin
-define('ADMIN_USER', 'admin');
-define('ADMIN_PASS', 'pizane2026');
+define('ADMIN_USER', getenv('ADMIN_USER') ?: 'admin');
+define('ADMIN_PASS', getenv('ADMIN_PASS') ?: 'pizane2026');
 
 function get_db_connection()
 {
