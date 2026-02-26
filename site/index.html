@@ -847,23 +847,20 @@
             }
         }
 
-        /* CARROSSEL DE RESULTADOS */
+        /* GALERIA DE RESULTADOS (ESTÁTICA) */
         .pz-results {
             padding: 80px 0 !important;
             background: var(--white) !important;
-            overflow: hidden !important;
         }
 
-        .pz-results-slider {
-            display: flex !important;
+        .pz-results-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
             gap: 30px !important;
-            transition: transform 0.5s ease-out !important;
-            padding: 20px 0 !important;
-            cursor: grab !important;
+            justify-content: center !important;
         }
 
         .pz-results-item {
-            min-width: 350px !important;
             background: var(--bg-light) !important;
             border-radius: 20px !important;
             overflow: hidden !important;
@@ -878,7 +875,7 @@
 
         .pz-results-img {
             width: 100% !important;
-            height: 300px !important;
+            height: 320px !important;
             object-fit: cover !important;
         }
 
@@ -898,32 +895,15 @@
             font-size: 14px !important;
             color: var(--text-muted) !important;
             margin: 0 !important;
+            line-height: 1.5 !important;
         }
 
-        .pz-slider-controls {
-            display: flex !important;
-            justify-content: center !important;
-            gap: 15px !important;
-            margin-top: 30px !important;
-        }
-
-        .pz-slider-btn {
-            width: 50px !important;
-            height: 50px !important;
-            border-radius: 50% !important;
-            border: 2px solid var(--primary) !important;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            color: var(--primary) !important;
-            cursor: pointer !important;
-            transition: 0.3s !important;
-            background: transparent !important;
-        }
-
-        .pz-slider-btn:hover {
-            background: var(--primary) !important;
-            color: var(--white) !important;
+        @media (max-width: 992px) {
+            .pz-results-grid {
+                grid-template-columns: 1fr !important;
+                max-width: 400px !important;
+                margin: 0 auto !important;
+            }
         }
     </style>
 </head>
@@ -1088,59 +1068,42 @@
     </section>
 
 
-    <!-- Carrossel de Resultados -->
+    <!-- Galeria de Resultados -->
     <section class="pz-results">
         <div class="pz-container">
             <div class="pz-section-header">
                 <div class="pz-badge">Resultados Reais</div>
                 <h2>A Arte de Realçar sua Beleza</h2>
-                <p>Confira alguns de nossos procedimentos e protocolos exclusivos realizados com a mais alta tecnologia.
-                </p>
+                <p>Confira alguns de nossos procedimentos e protocolos exclusivos realizados com a mais alta tecnologia
+                    em
+                    Itaperuna.</p>
             </div>
 
-            <div style="position: relative;">
-                <div class="pz-results-slider" id="results-slider">
-                    <!-- Item 1: Sobrancelhas -->
-                    <div class="pz-results-item">
-                        <img src="assets/img/sobrancelha.png" alt="Resultado Sobrancelha" class="pz-results-img">
-                        <div class="pz-results-info">
-                            <h4>Sobrancelhas</h4>
-                            <p>Design estratégico e nanopigmentação para um olhar marcante e natural.</p>
-                        </div>
-                    </div>
-                    <!-- Item 2: Lábios -->
-                    <div class="pz-results-item">
-                        <img src="assets/img/labios.png" alt="Resultado Lábios" class="pz-results-img">
-                        <div class="pz-results-info">
-                            <h4>Lábios</h4>
-                            <p>Revitalização e hidratação profunda para lábios volumosos e saudáveis.</p>
-                        </div>
-                    </div>
-                    <!-- Item 3: Pele -->
-                    <div class="pz-results-item">
-                        <div style="position: relative;">
-                            <img src="assets/img/limpeza-pele.png" alt="Resultado Limpeza de Pele"
-                                class="pz-results-img">
-                        </div>
-                        <div class="pz-results-info">
-                            <h4>Limpeza de Pele</h4>
-                            <p>Protocolo Detox Premium que renova sua pele e devolve o brilho natural.</p>
-                        </div>
-                    </div>
-                    <!-- Item 4: Procedimento Avançado (Repetindo pele ou outro) -->
-                    <div class="pz-results-item">
-                        <img src="assets/img/limpeza-pele.png" alt="Resultado Estética Avançada" class="pz-results-img">
-                        <div class="pz-results-info">
-                            <h4>Estética Avançada</h4>
-                            <p>Protocolos personalizados para harmonização facial e corporal.</p>
-                        </div>
+            <div class="pz-results-grid">
+                <!-- Item 1: Sobrancelhas -->
+                <div class="pz-results-item">
+                    <img src="assets/img/sobrancelha.png" alt="Resultado Sobrancelha" class="pz-results-img">
+                    <div class="pz-results-info">
+                        <h4>Sobrancelhas</h4>
+                        <p>Design estratégico e nanopigmentação para um olhar marcante e natural.</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="pz-slider-controls">
-                <button class="pz-slider-btn" onclick="slideResults(-1)"><i class="fas fa-chevron-left"></i></button>
-                <button class="pz-slider-btn" onclick="slideResults(1)"><i class="fas fa-chevron-right"></i></button>
+                <!-- Item 2: Lábios -->
+                <div class="pz-results-item">
+                    <img src="assets/img/labios.png" alt="Resultado Lábios" class="pz-results-img">
+                    <div class="pz-results-info">
+                        <h4>Lábios</h4>
+                        <p>Revitalização e hidratação profunda para lábios volumosos e saudáveis.</p>
+                    </div>
+                </div>
+                <!-- Item 3: Pele -->
+                <div class="pz-results-item">
+                    <img src="assets/img/limpeza-pele.png" alt="Resultado Limpeza de Pele" class="pz-results-img">
+                    <div class="pz-results-info">
+                        <h4>Limpeza de Pele</h4>
+                        <p>Protocolo Detox Premium que renova sua pele e devolve o brilho natural.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1254,21 +1217,6 @@
     <!-- LÓGICA DE COMPORTAMENTO -->
     <script>
         document.getElementById('pz-year').textContent = new Date().getFullYear();
-
-        /* Lógica do Carrossel */
-        let currentSlide = 0;
-        function slideResults(direction) {
-            const slider = document.getElementById('results-slider');
-            const items = document.querySelectorAll('.pz-results-item');
-            const itemWidth = items[0].offsetWidth + 30; // largura + gap
-            const maxSlides = items.length - Math.floor(slider.offsetWidth / itemWidth);
-
-            currentSlide += direction;
-            if (currentSlide < 0) currentSlide = 0;
-            if (currentSlide > maxSlides) currentSlide = maxSlides;
-
-            slider.style.transform = `translateX(-${currentSlide * itemWidth}px)`;
-        }
 
         window.addEventListener('scroll', () => {
             const header = document.getElementById('pz-navbar');
