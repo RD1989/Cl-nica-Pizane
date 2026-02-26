@@ -13,16 +13,28 @@
             "destination": "/site/index.html"
         },
         {
-            "source": "/api/(.*)",
-            "destination": "/api/$1.php"
+            "source": "/api/agendar",
+            "destination": "/api/agendar.php"
+        },
+        {
+            "source": "/api/agendar.php",
+            "destination": "/api/agendar.php"
         },
         {
             "source": "/admin",
             "destination": "/admin/index.php"
         },
         {
-            "source": "/admin/(.*)",
-            "destination": "/admin/$1.php"
+            "source": "/admin/login",
+            "destination": "/admin/login.php"
+        },
+        {
+            "source": "/admin/login.php",
+            "destination": "/admin/login.php"
+        },
+        {
+            "source": "/admin/logout",
+            "destination": "/admin/logout.php"
         }
     ]
 }
